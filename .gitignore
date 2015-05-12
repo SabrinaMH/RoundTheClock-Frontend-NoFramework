@@ -1,5 +1,6 @@
 src/js
-src/*.css
+src/css/*.css
+src/css/*.map
 bower_components
 node_modules
 
