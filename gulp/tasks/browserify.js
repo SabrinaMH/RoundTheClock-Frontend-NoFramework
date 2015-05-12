@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 gulp.task('browserify', ['compile-ts'], function() {
 	return browserify({
-			entries: './src/js/start.js',
+			entries: config.tsOutputPath + '/start.js',
 			debug: true
 		})
 		.transform(debowerify)

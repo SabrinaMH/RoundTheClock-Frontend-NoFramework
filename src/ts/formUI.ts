@@ -3,6 +3,8 @@
 
 var $: JQueryStatic;
 $ = require('jquery');
+jQuery = $; // needed for jquery-ui (no var, as it needs to be global)
+require('jquery-ui');
 var dataFromApi = require('./data');
 
 module UI {
@@ -15,6 +17,20 @@ module UI {
         private selectedCustName: string;
         private selectedProjName: string;
         private selectedTaskName: string;
+        private selectedDate: string;
+
+        public setUpDatePicker() {
+            var $datepicker = $('#datepicker');
+            $datepicker.datepicker({
+                dateFormat: 'dd-mm-yy',
+                onSelect: date => {
+                    console.log(date);
+                    this.selectedDate = date;
+                }
+            });
+            var today = new Date();
+            $datepicker.datepicker('setDate', today);
+        }
 
         public bindDataToForm() {
             var data = new dataFromApi();

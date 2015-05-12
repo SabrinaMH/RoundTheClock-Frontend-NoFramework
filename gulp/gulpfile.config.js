@@ -6,7 +6,9 @@ var source = './src/',
     typings = './tools/typings/';
 
 module.exports = {
+    source: source,
     sourceSass: sourceSass,
+    allSass: sourceSass + '*.scss',
     mainSass: sourceSass + 'main.scss',
     tsOutputPath: source + '/js',
     allJavaScript: [source + '/js/**/*.js'],

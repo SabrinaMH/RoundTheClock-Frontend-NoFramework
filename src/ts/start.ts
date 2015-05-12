@@ -11,4 +11,5 @@ $(document).ready(() => {
     var ui = new formUI();
     ui.bindDataToForm();
     ui.listenForSelections();
+    ui.setUpDatePicker();
 });
