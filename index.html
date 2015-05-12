@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Round the Clock</title>
+    <link href="favicon.ico" /> 
+    <link href="src/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="src/js/bundle.js"></script>
+</head>
+<body>
+    <header classname="headline">
+        <h1>Round the Clock</h1>
+    </header>
+    <section>
+        <form id="time-entry-form">
+            <select id="customers" required></select>
+            <select id="projects" required></select>
+            <select id="tasks" required></select>
+
+            <input type='text' placeholder='Date' id="date" />
+            <input id="from" placeholder="From" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" required />
+            <input id="to" placeholder="To" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" required />
+            <button type="submit" onclick={this.save}>Save</button>
+        </form>
+    </section>
+    <section>
+        <p id="errorMessage"></p>
+    </section>
+</body>
+</html>
