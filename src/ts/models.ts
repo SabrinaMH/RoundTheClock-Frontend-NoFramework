@@ -3,16 +3,16 @@
 
 module Models {
 	export interface ICustomer {
-		Name: string;
-		Projects: IProject[];
+		name: string;
+		projects: IProject[];
 	}
 
 	export interface IProject {
-		Name: string;
-		Tasks: ITask[];
+		name: string;
+		tasks: ITask[];
 	}
 
 	export interface ITask {
-		Name: string;
+		name: string;
 	}
 }

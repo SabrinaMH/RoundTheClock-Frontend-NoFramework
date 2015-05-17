@@ -5,11 +5,8 @@
 var $: JQueryStatic;
 $ = require('jquery');
 
-var formUI = require('./formUI');
+var formWM = require('./formWM');
 
 $(document).ready(() => {
-    var ui = new formUI();
-    ui.bindDataToForm();
-    ui.listenForSelections();
-    ui.setUpDatePicker();
+    var ui = new formWM();
 });
