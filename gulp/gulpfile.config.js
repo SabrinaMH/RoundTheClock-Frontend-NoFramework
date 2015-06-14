@@ -2,7 +2,7 @@
 
 var source = './src/',
     sourceTs = source + 'ts/',
-    sourceSass = source + 'css/',
+    sourceSass = source + 'scss/',
     typings = './tools/typings/';
 
 module.exports = {

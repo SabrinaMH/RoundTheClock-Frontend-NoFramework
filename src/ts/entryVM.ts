@@ -1,7 +1,7 @@
 ﻿/// <reference path="../../tools/typings/tsd.d.ts" />
 /// <reference path="../../tools/typings/typescriptApp.d.ts" />
 
-module WM {
+module VM {
     export class EntryVM {
         private customerName: string;
         private projectName: string;
@@ -21,4 +21,4 @@ module WM {
     }
 }
 
-module.exports = WM.EntryVM;
+module.exports = VM.EntryVM;

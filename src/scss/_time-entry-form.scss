@@ -1,0 +1,9 @@
+@import 'variables';
+
+#time-entry-form {
+	input {
+		&:invalid {
+            border-color: $errorColor;
+		}
+	}
+}

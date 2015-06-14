@@ -14,5 +14,14 @@ module Models {
 
 	export interface ITask {
 		name: string;
-	}
+    }
+
+    export interface IEntry {
+        customer: string;
+        project: string;
+        task: string;
+        date: string;
+        from: string;
+        to: string;
+    }
 }

@@ -1,0 +1,23 @@
+@import 'variables';
+
+[class*='col-'] {
+	float: left;
+	margin-right: $rightMarginInGrid;
+}
+
+.grid {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.col-2-13 {
+		width: calc(15.3% - #{$rightMarginInGrid});
+		min-width: $minWidthBtn;
+	}
+
+	.last-col {
+		margin-right: 0px;
+	}
+}

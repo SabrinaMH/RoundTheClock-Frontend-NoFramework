@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Round the Clock</title>
     <link href="favicon.ico" /> 
-    <link href="src/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="src/scss/main.css" rel="stylesheet" type="text/css" />
     <script src="src/js/bundle.js"></script>
 </head>
 <body>
@@ -13,18 +13,37 @@
     </header>
     <section>
         <form id="time-entry-form">
-            <select id="customers" required></select>
-            <select id="projects" required></select>
-            <select id="tasks" required></select>
+            <div class="grid">
+                <select id="customers" class="col-2-13" required></select>
+                <select id="projects" class="col-2-13" required></select>
+                <select id="tasks" class="col-2-13" required></select>
 
-            <input id="date" type='text' placeholder='Date' required />
-            <input id="from" placeholder="From" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" required />
-            <input id="to" placeholder="To" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" required />
-            <button id="saveBtn" type="submit">Save</button>
+                <input id="date" type='text' placeholder='Date' class="col-2-13" required />
+                <input id="from" placeholder="From" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" class="col-2-13" required />
+                <input id="to" placeholder="To" type="text" pattern="[0-9]{1,2}(:[0-9]{1,2})?" title="Format xx:xx" class="col-2-13" required />
+                <button id="saveBtn" type="submit" class="last-col">Save</button>
+            </div>
         </form>
     </section>
     <section>
         <p id="message"></p>
+    </section>
+    <section>
+        <button id="uncommittedEntriesBtn">Uncommitted entries</button>
+        <table id="uncommittedEntriesTbl">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Project</th>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>From</th>
+                    <th>To</th>
+                </tr>
+            </thead>
+            <tbody id="uncommittedEntriesTblBody">
+            </tbody>
+        </table>
     </section>
 </body>
 </html>

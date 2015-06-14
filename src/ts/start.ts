@@ -2,11 +2,10 @@
 /// <reference path="../../tools/typings/tsd.d.ts" />
 /// <reference path="../../tools/typings/typescriptApp.d.ts" />
 
-var $: JQueryStatic;
-$ = require('jquery');
+var formVM = require('./formVM');
+var tableVM = require('./tableVM');
 
-var formWM = require('./formWM');
-
-$(document).ready(() => {
-    var ui = new formWM();
+document.addEventListener('DOMContentLoaded', () => {
+    new formVM();
+    new tableVM();
 });
